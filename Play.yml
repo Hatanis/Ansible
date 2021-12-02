@@ -3,18 +3,6 @@
   tasks:
     - name: Install apache
       apt: 
-        name: python-is-python3
-        state: present
-      when: ansible_os_family == 'Debian'
-
-    - name: Install apache
-      yum: 
-        name: python-is-python3
-        state: present
-      when: ansible_os_family == 'RedHat'
-
-    - name: Install apache
-      apt: 
         name: apache2
         state: present
       when: ansible_os_family == 'Debian'
