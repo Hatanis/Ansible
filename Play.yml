@@ -1,6 +1,19 @@
 - hosts: all
   become: true
   tasks:
+  
+      - name: Install apache
+      apt: 
+        name: python-is-python3
+        state: present
+      when: ansible_os_family == 'Debian'
+
+    - name: Install apache
+      yum: 
+        name: python-is-python3
+        state: present
+      when: ansible_os_family == 'RedHat'
+
     - name: Install apache
       apt: 
         name: apache2
@@ -8,7 +21,7 @@
       when: ansible_os_family == 'Debian'
 
     - name: Install apache
-      apt: 
+      yum: 
         name: httpd
         state: present
       when: ansible_os_family == 'RedHat'
