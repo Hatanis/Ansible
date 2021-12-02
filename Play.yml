@@ -1,4 +1,6 @@
--host:
- become: true
-   -task:
-     ping:
+- host: all
+  become: true
+  tasks:
+    - name: Install apache
+      apt: apache2
+      state: present
