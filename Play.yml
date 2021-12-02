@@ -1,8 +1,7 @@
 - hosts: all
   become: true
   tasks:
-  
-      - name: Install apache
+    - name: Install apache
       apt: 
         name: python-is-python3
         state: present
