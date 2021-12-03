@@ -3,4 +3,4 @@
   tasks:
   
   - debug:
-      msg: ansiblle-facts
+      var: ansiblle_facts
