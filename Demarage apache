@@ -1,0 +1,9 @@
+- hosts: all
+  become: true
+  tasks:
+  
+  - name: Start service httpd
+    ansible.builtin.service:
+      name: httpd
+      state: started
+      enable:
