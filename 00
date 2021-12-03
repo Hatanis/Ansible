@@ -1,0 +1,1 @@
+curl -XPATCH -u admin:35BsKAhuEEnOU9HawsGPSXtAsPtV3pwk http://192.168.49.2:32072/api/v2/users/3/ -d '{"password":"azerty"}' -H "content-type:application/json" | jq
