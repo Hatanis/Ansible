@@ -1,0 +1,7 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: Template a file to /etc/file.conf
+      ansible.builtin.template:
+        src: modt.j2
+        dest: /etc/motd
