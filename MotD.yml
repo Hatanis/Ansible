@@ -3,5 +3,5 @@
   tasks:
     - name: Template a file to /etc/motd
       ansible.builtin.template:
-        src: modt.j2
+        src: MotD.j2
         dest: /etc/motd
