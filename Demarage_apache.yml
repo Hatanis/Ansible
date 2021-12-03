@@ -2,8 +2,16 @@
   become: true
   tasks:
   
-  - name: Start service httpd
+  - name: Start service apache Debian
+    ansible.builtin.service:
+      name: apache
+      state: started
+      enabled: true
+    when: ansible_os_family == 'Debian'
+        
+  - name: Start service httpd CentOS
     ansible.builtin.service:
       name: httpd
       state: started
       enabled: true
+    when: ansible_os_family == 'RedHat'
