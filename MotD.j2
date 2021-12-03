@@ -1,6 +1,6 @@
 {{ansible_ssh_host}}
 
 
-{% for addr in all_ipv6_addresses %}
-    {{ key|e }}
+{% for addr in all_ipv4_addresses %}
+    {{ addr }}
 {% endfor %}
